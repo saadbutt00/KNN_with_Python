@@ -143,7 +143,7 @@ if "model" in st.session_state:
         labels = [y for _, y in neighbors]
         prediction = collections.Counter(labels).most_common(1)[0][0]
 
-        st.success(f"🔮 Prediction for `{st.session_state['model']['target_name']}`: `{prediction.capitalize()`")
+        st.success(f"🔮 Prediction for `{st.session_state['model']['target_name']}`: `{prediction.capitalize()}`")
 
         # Show non-numeric (string) features
         str_feats = [name for name, is_num in zip(st.session_state["model"]["feature_names"], st.session_state["model"]["is_numeric"]) if not is_num]
